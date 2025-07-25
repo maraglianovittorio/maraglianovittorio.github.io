@@ -105,16 +105,30 @@ body.dark header {
   border: 4px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
-
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
   background: linear-gradient(135deg, #3b82f6, #9333ea);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: pulse 2s infinite ease-in-out;
+  text-align: center;
+  letter-spacing: 0.5px;
+  animation: pulse 3s infinite ease-in-out;
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    letter-spacing: 0.5px;
+  }
+  50% {
+    transform: scale(1.04);
+    letter-spacing: 1px;
+  }
 }
 
 .subtitle {
